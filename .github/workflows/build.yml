@@ -1,6 +1,6 @@
 name: React build
 on: # develop branch에서 merge 이벤트가 발생했을 때
-  merge:
+  push:
     branches:
       - develop
 jobs:
