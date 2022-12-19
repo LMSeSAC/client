@@ -1,0 +1,16 @@
+name: React build
+on: # develop branch에서 merge 이벤트가 발생했을 때
+  push:
+    branches:
+      - develop
+jobs:
+  build:
+    runs-on: ubuntu-18.04
+    steps:
+      - name: Checkout source code # Repository 체크아웃
+        uses: actions/checkout@develop
+      - name: Install Dependencies # 의존 파일 설치
+        run: npm install
+      - name: Build
+        run: npm run build
+
