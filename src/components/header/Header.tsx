@@ -11,13 +11,13 @@ export default function Header() {
                 <img src="/img/main/logo.png" alt="logo" />
               </a>
               <div>
-                <a href="#firstPage">
+                <a href="#notice">
                   <span>공지사항</span>
                 </a>
-                <a href="#secondPage">
+                <a href="#qna">
                   <span>질문게시판</span>
                 </a>
-                <a href="#thirdPage">
+                <a href="#inquiry">
                   <span>건의게시판</span>
                 </a>
               </div>

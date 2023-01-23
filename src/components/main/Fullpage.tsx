@@ -1,7 +1,8 @@
 import ReactFullpage from "@fullpage/react-fullpage";
 import "./Fullpage.scss";
+import SectionOne from "./SectionOne";
 
-const anchors = ["firstPage", "secondPage", "thirdPage"];
+const anchors = ["notice", "qna", "inquiry"];
 
 const Fullpage = () => (
   <ReactFullpage
@@ -14,7 +15,7 @@ const Fullpage = () => (
         <>
           <div className="main-page">
             <div className="section section-1">
-              <div>First</div>
+              <SectionOne />
             </div>
             <div className="section section-2">
               <div>Second</div>

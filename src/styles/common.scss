@@ -1,4 +1,5 @@
 @import "~include-media/dist/include-media";
+@import url("https://fonts.googleapis.com/css2?family=Jua&display=swap");
 
 :root {
   // color
@@ -9,6 +10,10 @@
   //size
   --base-space: 8px;
   --header-height: 70px;
+}
+
+body {
+  font-family: "Jua", sans-serif;
 }
 
 // max-width
@@ -26,6 +31,14 @@
   @include media("<768px") {
     max-width: 468px;
   }
+}
+
+h1 {
+  font-size: 40px;
+}
+
+h3 {
+  font-size: 20px;
 }
 
 a {
