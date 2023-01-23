@@ -1,0 +1,33 @@
+header {
+  nav {
+    position: fixed;
+    z-index: 1000;
+    width: 100%;
+    height: var(--header-height);
+    padding: var(--base-space) 0;
+    background-color: white;
+    box-shadow: 0 5px 15px -5px var(--color-shadow);
+
+    .d-flex {
+      justify-content: space-between;
+      align-items: center;
+
+      img {
+        height: var(--header-height);
+      }
+
+      span {
+        cursor: pointer;
+        margin: 0 calc(var(--base-space) * 2);
+      }
+
+      span:last-child {
+        margin-right: 0;
+      }
+
+      span:hover {
+        color: var(--color-green);
+      }
+    }
+  }
+}

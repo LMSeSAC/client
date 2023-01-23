@@ -1,8 +1,15 @@
 @import "~include-media/dist/include-media";
 
-// color
-$green: #58dd78;
-$light-green: #b2e569;
+:root {
+  // color
+  --color-green: #58dd78;
+  --color-light-green: #b2e569;
+  --color-shadow: #d3d3d3;
+
+  //size
+  --base-space: 8px;
+  --header-height: 70px;
+}
 
 // max-width
 .container {
@@ -19,4 +26,13 @@ $light-green: #b2e569;
   @include media("<768px") {
     max-width: 468px;
   }
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+.d-flex {
+  display: flex;
 }
