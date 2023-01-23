@@ -7,7 +7,9 @@ export default function Header() {
         <nav>
           <div className="container">
             <div className="d-flex">
-              <img src="/img/main/logo.png" alt="logo" />
+              <a href="/">
+                <img src="/img/main/logo.png" alt="logo" />
+              </a>
               <div>
                 <a href="#firstPage">
                   <span>공지사항</span>
