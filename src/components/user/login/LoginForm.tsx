@@ -4,6 +4,7 @@ import Input from "./Input";
 import "./LoginForm.scss";
 
 export default function LoginForm() {
+  const login = () => {};
   return (
     <>
       <div className="login-form d-flex">
@@ -14,7 +15,7 @@ export default function LoginForm() {
           <form>
             <Input iType="text" icon={faUser} />
             <Input iType="password" icon={faLock} />
-            <Button btnName="로그인" />
+            <Button btnName="로그인" f={login} />
           </form>
           <div className="menu">
             <a href="/user/join">

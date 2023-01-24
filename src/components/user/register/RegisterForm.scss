@@ -14,4 +14,15 @@
       color: var(--color-green);
     }
   }
+
+  .warning {
+    color: red;
+    font-size: var(--small-text);
+    text-align: left;
+    margin-top: var(--base-space);
+  }
+
+  button {
+    margin-top: 32px;
+  }
 }
