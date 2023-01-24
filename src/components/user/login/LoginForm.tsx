@@ -1,5 +1,5 @@
 import { faUser, faLock } from "@fortawesome/free-solid-svg-icons";
-import Button from "./Button";
+import Button from "../Button";
 import Input from "./Input";
 import "./LoginForm.scss";
 
@@ -17,7 +17,7 @@ export default function LoginForm() {
             <Button btnName="로그인" />
           </form>
           <div className="menu">
-            <a href="#">
+            <a href="/user/join">
               <span>회원가입</span>
             </a>
             <span> | </span>

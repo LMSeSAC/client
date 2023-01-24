@@ -15,7 +15,7 @@ export default function SectionOne() {
               System(LMS) 입니다.
             </h3>
             <button className="guide">이용 가이드</button>
-            <a href="/classroom">
+            <a href="/user/login">
               <button className="classroom">강의실 입장</button>
             </a>
           </div>

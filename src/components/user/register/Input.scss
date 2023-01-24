@@ -1,0 +1,16 @@
+.register-input {
+  p {
+    text-align: left;
+    margin-bottom: var(--base-space);
+  }
+
+  input {
+    width: 100%;
+    margin-bottom: calc(var(--base-space) * 3);
+    padding: 5px 0 5px 8px;
+  }
+
+  input:focus {
+    outline: none;
+  }
+}
