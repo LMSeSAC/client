@@ -7,13 +7,18 @@
   --color-light-green: #b2e569;
   --color-shadow: #d3d3d3;
 
-  //size
+  // size
   --base-space: 8px;
   --header-height: 70px;
+
+  // font size
+  --small-text: 14px;
 }
 
-body {
+body,
+input {
   font-family: "Jua", sans-serif;
+  box-sizing: border-box;
 }
 
 // max-width
