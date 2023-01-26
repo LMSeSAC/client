@@ -22,11 +22,11 @@ export default function LoginForm() {
               <span>회원가입</span>
             </a>
             <span> | </span>
-            <a href="#">
+            <a href="/user/join">
               <span>아이디 찾기</span>
             </a>
             <span> | </span>
-            <a href="#">
+            <a href="/user/join">
               <span>비밀번호 찾기</span>
             </a>
           </div>

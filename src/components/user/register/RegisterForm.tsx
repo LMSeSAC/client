@@ -6,7 +6,7 @@ import Input from "./Input";
 import "./RegisterForm.scss";
 
 export default function RegisterForm() {
-  const [searchParams, setSearchParams] = useSearchParams();
+  const [searchParams] = useSearchParams();
   const [formValue, setFormValue] = useState({
     name: "",
     id: "",
