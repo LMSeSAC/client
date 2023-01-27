@@ -1,4 +1,6 @@
 import "./Header.scss";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faUser } from "@fortawesome/free-solid-svg-icons";
 
 export default function Header() {
   return (
@@ -19,6 +21,13 @@ export default function Header() {
                 </a>
                 <a href="#inquiry">
                   <span>건의게시판</span>
+                </a>
+                <a href="/user/login">
+                  <div className="user-icon">
+                    <span>
+                      <FontAwesomeIcon icon={faUser} />
+                    </span>
+                  </div>
                 </a>
               </div>
             </div>
