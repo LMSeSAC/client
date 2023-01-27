@@ -1,0 +1,17 @@
+.form-button {
+  button {
+    width: 100%;
+    color: white;
+    border: 2px solid var(--color-green);
+    background-color: var(--color-green);
+    padding: var(--base-space) 0;
+    margin: calc(var(--base-space) * 2) 0;
+    cursor: pointer;
+  }
+
+  button:hover {
+    color: black;
+    background-color: white;
+    border: 2px solid var(--color-green);
+  }
+}

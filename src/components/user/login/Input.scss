@@ -1,0 +1,23 @@
+.form-input {
+  position: relative;
+  align-items: center;
+  margin: var(--base-space) 0;
+
+  span {
+    color: gray;
+    position: absolute;
+    left: 10px;
+  }
+
+  input {
+    width: 300px;
+    padding: var(--base-space) 0;
+    padding-left: calc(var(--base-space) * 5);
+    border: none;
+    background-color: rgb(230, 230, 230);
+  }
+
+  input:focus {
+    outline: none;
+  }
+}

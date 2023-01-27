@@ -1,0 +1,28 @@
+.register-form {
+  text-align: center;
+  width: fit-content;
+  margin: auto;
+
+  img {
+    margin: calc(var(--base-space) * 2) 0;
+  }
+
+  h3 {
+    margin-bottom: calc(var(--base-space) * 3);
+
+    span {
+      color: var(--color-green);
+    }
+  }
+
+  .warning {
+    color: red;
+    font-size: var(--small-text);
+    text-align: left;
+    margin-top: var(--base-space);
+  }
+
+  button {
+    margin-top: 32px;
+  }
+}

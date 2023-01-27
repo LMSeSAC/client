@@ -1,0 +1,56 @@
+@import "~include-media/dist/include-media";
+@import url("https://fonts.googleapis.com/css2?family=Jua&display=swap");
+
+:root {
+  // color
+  --color-green: #58dd78;
+  --color-light-green: #b2e569;
+  --color-shadow: #d3d3d3;
+
+  // size
+  --base-space: 8px;
+  --header-height: 70px;
+
+  // font size
+  --small-text: 14px;
+}
+
+body,
+input {
+  font-family: "Jua", sans-serif;
+  box-sizing: border-box;
+}
+
+// max-width
+.container {
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+
+  @include media("<1200px") {
+    max-width: 900px;
+  }
+  @include media("<992px") {
+    max-width: 692px;
+  }
+  @include media("<768px") {
+    max-width: 468px;
+  }
+}
+
+h1 {
+  font-size: 40px;
+}
+
+h3 {
+  font-size: 20px;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+.d-flex {
+  display: flex;
+}

@@ -1,0 +1,46 @@
+.register-main {
+  height: 100vh;
+  text-align: center;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  h1 {
+    span {
+      color: var(--color-green);
+    }
+
+    margin-bottom: calc(var(--base-space) * 5);
+  }
+
+  .d-flex {
+    width: fit-content;
+    border: 2px solid black;
+    justify-content: center;
+    gap: 200px;
+    padding: calc(var(--base-space) * 5) calc(var(--base-space) * 10);
+
+    img {
+      width: 100px;
+      margin-bottom: calc(var(--base-space) * 2);
+    }
+
+    h3 {
+      margin-top: 5px;
+    }
+  }
+
+  button {
+    color: white;
+    border: 2px solid var(--color-green);
+    background-color: var(--color-green);
+    margin-top: calc(var(--base-space) * 2);
+    padding: var(--base-space) calc(var(--base-space) * 2);
+    cursor: pointer;
+  }
+
+  button:hover {
+    color: black;
+    background-color: white;
+  }
+}
