@@ -27,6 +27,11 @@ header {
       span:hover {
         color: var(--color-green);
       }
+
+      .user-icon {
+        display: inline-block;
+        margin-left: 40px;
+      }
     }
   }
 }
