@@ -1,3 +1,9 @@
+import Title from "../element/Title";
+
 export default function Students() {
-  return <>students</>;
+  return (
+    <>
+      <Title title="학생 목록" />
+    </>
+  );
 }
