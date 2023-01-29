@@ -21,7 +21,7 @@ export default function Window({ content, onClick }: contentT) {
         {content === "material" && <Material />}
         {content === "question" && <Question onClick={onClick} />}
         {content === "students" && <Students />}
-        {content === "q-form" && <PostQuestion />}
+        {content === "q-form" && <PostQuestion onClick={onClick} />}
       </div>
     </>
   );

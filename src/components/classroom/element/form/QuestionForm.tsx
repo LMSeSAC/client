@@ -1,8 +1,13 @@
+import { clickT } from "../../../../types/ClassroomT";
+import { cancle, post } from "../../../../utils/alert";
 import Input from "./Input";
 import Button from "./Button";
 import "./QuestionForm.scss";
 
-export default function QuestionForm() {
+export default function QuestionForm({ onClick }: clickT) {
+  const goBack = () => {
+    onClick("question");
+  };
   return (
     <>
       <div className="question-form">
@@ -20,8 +25,18 @@ export default function QuestionForm() {
             <input type="file" />
           </div>
           <div className="btns">
-            <Button name="취소" />
-            <Button name="작성" />
+            <Button
+              name="취소"
+              onClick={() => {
+                cancle(goBack);
+              }}
+            />
+            <Button
+              name="작성"
+              onClick={() => {
+                post(goBack);
+              }}
+            />
           </div>
         </form>
       </div>
