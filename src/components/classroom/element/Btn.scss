@@ -1,0 +1,10 @@
+.write-btn {
+  button {
+    color: white;
+    font-size: var(--small-text);
+    background-color: var(--color-green);
+    padding: var(--base-space) calc(var(--base-space) * 2);
+    margin-top: calc(var(--base-space) * 4);
+    cursor: pointer;
+  }
+}
