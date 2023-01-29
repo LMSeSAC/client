@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { useSearchParams } from "react-router-dom";
+import { useSearchParams, Link } from "react-router-dom";
 import { emailCheck, phoneCheck, passwordCheck } from "./CheckValidity";
 import Button from "../Button";
 import Input from "./Input";
@@ -54,9 +54,9 @@ export default function RegisterForm() {
   return (
     <>
       <div className="register-form">
-        <a href="/">
+        <Link to="/">
           <img src="/img/main/logo.png" alt="logo" />
-        </a>
+        </Link>
         <h3>
           <span>
             {searchParams.get("type") === "student" ? "수강생 " : "선생님 "}

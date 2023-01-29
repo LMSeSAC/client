@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faHouse } from "@fortawesome/free-solid-svg-icons";
 import {
@@ -17,9 +18,9 @@ export default function SideMenu({ onClick }: onClickT) {
     <>
       <div className="side-menu d-flex">
         <div className="logo">
-          <a href="/">
+          <Link to="/">
             <img src="/img/main/logo.png" alt="logo" />
-          </a>
+          </Link>
         </div>
         <div className="m-menu d-flex">
           <span onClick={() => onClick("home")}>

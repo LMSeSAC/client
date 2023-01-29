@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import "./SectionOne.scss";
 
 export default function SectionOne() {
@@ -15,9 +16,9 @@ export default function SectionOne() {
               System(LMS) 입니다.
             </h3>
             <button className="guide">이용 가이드</button>
-            <a href="/classroom">
+            <Link to="/classroom">
               <button className="classroom">강의실 입장</button>
-            </a>
+            </Link>
           </div>
         </div>
       </div>

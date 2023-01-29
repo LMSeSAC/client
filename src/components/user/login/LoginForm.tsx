@@ -1,6 +1,7 @@
-import { faUser, faLock } from "@fortawesome/free-solid-svg-icons";
+import { Link } from "react-router-dom";
 import Button from "../Button";
 import Input from "./Input";
+import { faUser, faLock } from "@fortawesome/free-solid-svg-icons";
 import "./LoginForm.scss";
 
 export default function LoginForm() {
@@ -9,26 +10,26 @@ export default function LoginForm() {
     <>
       <div className="login-form d-flex">
         <div className="box">
-          <a href="/">
+          <Link to="/">
             <img src="/img/main/logo.png" alt="logo" />
-          </a>
+          </Link>
           <form>
             <Input iType="text" icon={faUser} />
             <Input iType="password" icon={faLock} />
             <Button btnName="로그인" f={login} />
           </form>
           <div className="menu">
-            <a href="/user/join">
+            <Link to="/user/join">
               <span>회원가입</span>
-            </a>
+            </Link>
             <span> | </span>
-            <a href="/user/join">
+            <Link to="/user/join">
               <span>아이디 찾기</span>
-            </a>
+            </Link>
             <span> | </span>
-            <a href="/user/join">
+            <Link to="/user/join">
               <span>비밀번호 찾기</span>
-            </a>
+            </Link>
           </div>
         </div>
       </div>
