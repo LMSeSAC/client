@@ -3,6 +3,8 @@ import Main from "../pages/Main";
 import Classroom from "../pages/Classroom";
 import Login from "../pages/Login";
 import Register from "../pages/Register";
+import "../pages/Pages.scss";
+
 export default function Router() {
   return (
     <>

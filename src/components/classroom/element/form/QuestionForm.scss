@@ -1,0 +1,49 @@
+.question-form {
+  form {
+    border: 2px solid black;
+    padding: calc(var(--base-space) * 2);
+    margin-bottom: calc(var(--base-space) * 10);
+
+    div {
+      margin-bottom: calc(var(--base-space) * 2);
+    }
+
+    span {
+      width: 80px;
+      display: inline-block;
+    }
+
+    input {
+      flex-grow: 1;
+    }
+
+    input:focus {
+      outline: none;
+    }
+
+    .text {
+      flex-grow: 1;
+      height: 350px;
+      border: 2px solid black;
+      position: relative;
+    }
+
+    .imgs {
+      position: absolute;
+      bottom: 16px;
+      margin-bottom: 0;
+    }
+
+    .img {
+      width: 80px;
+      height: 80px;
+      border: 2px solid black;
+      margin: 0 0 0 16px;
+    }
+
+    .btns {
+      text-align: right;
+      margin-bottom: 0;
+    }
+  }
+}

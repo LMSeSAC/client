@@ -5,8 +5,10 @@ import Title from "../element/Title";
 export default function Notice({ onClick }: clickT) {
   return (
     <>
-      <Title title="공지사항" />
-      <NoticeTable onClick={onClick} />
+      <div className="window">
+        <Title title="공지사항" />
+        <NoticeTable onClick={onClick} />
+      </div>
     </>
   );
 }

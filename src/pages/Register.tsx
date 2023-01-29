@@ -7,7 +7,13 @@ export default function Register() {
 
   return (
     <>
-      {searchParams.get("type") === null ? <RegisterMain /> : <RegisterForm />}
+      <div className="register">
+        {searchParams.get("type") === null ? (
+          <RegisterMain />
+        ) : (
+          <RegisterForm />
+        )}
+      </div>
     </>
   );
 }
