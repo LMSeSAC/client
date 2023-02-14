@@ -1,6 +1,6 @@
 table {
+  width: 100%;
   text-align: center;
-  margin: 0 auto !important;
 }
 
 tr {
@@ -9,18 +9,31 @@ tr {
   border-bottom: 2px solid black !important;
 }
 
-th {
-  width: 500px;
-}
-
-th:first-child {
-  width: 50px;
-}
-
-th:last-child {
-  width: 120px;
-}
-
 td {
   padding: 0 5px !important;
+}
+
+.notice-table {
+  text-align: right;
+
+  th:first-child {
+    width: 50px;
+  }
+  th:last-child {
+    width: 120px;
+  }
+}
+
+.q-table {
+  text-align: right;
+
+  th:first-child {
+    width: 70%;
+  }
+  th:nth-child(2) {
+    width: 10%;
+  }
+  th:last-child {
+    width: 20%;
+  }
 }

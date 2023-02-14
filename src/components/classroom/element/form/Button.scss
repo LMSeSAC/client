@@ -1,0 +1,15 @@
+.form-btn {
+  background-color: white;
+  border: 2px solid var(--color-green) !important;
+  padding: var(--base-space) calc(var(--base-space) * 2) !important;
+  cursor: pointer;
+}
+
+.form-btn:hover {
+  color: white;
+  background-color: var(--color-green);
+}
+
+.form-btn:first-child {
+  margin-right: var(--base-space);
+}

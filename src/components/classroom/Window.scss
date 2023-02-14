@@ -1,7 +1,12 @@
 @import "~include-media/dist/include-media";
 
-.window {
+.screen {
   width: 100%;
+  height: 100vh;
+  overflow-y: auto;
+}
+
+.window {
   max-width: 1050px;
   margin: 0 auto;
   padding-top: calc(var(--base-space) * 10);

@@ -8,11 +8,12 @@ export default function Classroom() {
   const onClick = (content: string) => {
     setContent(content);
   };
+
   return (
     <>
       <div className="d-flex">
         <SideMenu onClick={onClick} />
-        <Window content={content} />
+        <Window content={content} onClick={onClick} />
       </div>
     </>
   );

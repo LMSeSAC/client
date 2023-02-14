@@ -1,6 +1,7 @@
-import "./Header.scss";
+import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faUser } from "@fortawesome/free-solid-svg-icons";
+import "./Header.scss";
 
 export default function Header() {
   return (
@@ -9,9 +10,9 @@ export default function Header() {
         <nav>
           <div className="container">
             <div className="d-flex">
-              <a href="/">
+              <Link to="/">
                 <img src="/img/main/logo.png" alt="logo" />
-              </a>
+              </Link>
               <div>
                 <a href="#notice">
                   <span>공지사항</span>
@@ -22,13 +23,13 @@ export default function Header() {
                 <a href="#inquiry">
                   <span>건의게시판</span>
                 </a>
-                <a href="/user/login">
+                <Link to="/user/login">
                   <div className="user-icon">
                     <span>
                       <FontAwesomeIcon icon={faUser} />
                     </span>
                   </div>
-                </a>
+                </Link>
               </div>
             </div>
           </div>
