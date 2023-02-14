@@ -4,46 +4,43 @@
     padding: calc(var(--base-space) * 2);
     margin-bottom: calc(var(--base-space) * 10);
 
-    div {
-      margin-bottom: calc(var(--base-space) * 2);
-    }
-
-    span {
-      width: 80px;
-      display: inline-block;
-    }
-
-    input {
-      flex-grow: 1;
-    }
-
-    input:focus {
-      outline: none;
-    }
-
-    .text {
-      flex-grow: 1;
-      height: 350px;
-      border: 2px solid black;
-      position: relative;
-    }
-
-    .imgs {
-      position: absolute;
-      bottom: 16px;
-      margin-bottom: 0;
-    }
-
-    .img {
-      width: 80px;
-      height: 80px;
-      border: 2px solid black;
-      margin: 0 0 0 16px;
-    }
-
     .btns {
       text-align: right;
+      margin-top: calc(var(--base-space) * 2);
+    }
+
+    .tag-box {
+      margin-left: calc(var(--base-space) * 13);
+      margin-bottom: calc(var(--base-space) * 2);
+
+      div {
+        display: inline-block;
+        padding: 5px 10px;
+        border-radius: 15px;
+        background-color: rgb(223, 223, 223);
+        margin-right: calc(var(--base-space) * 2);
+        cursor: pointer;
+
+        span {
+          pointer-events: none;
+        }
+
+        span:first-child {
+          margin-right: calc(var(--base-space) * 2);
+        }
+      }
+    }
+
+    .ql-toolbar {
+      border: 2px solid black;
       margin-bottom: 0;
+    }
+
+    .ql-editor {
+      height: 400px;
+      border-bottom: 2px solid black;
+      border-left: 2px solid black;
+      border-right: 2px solid black;
     }
   }
 }

@@ -1,0 +1,16 @@
+.label {
+  display: inline-block;
+  padding: 5px 10px;
+  width: calc(var(--base-space) * 10);
+}
+
+.q-input {
+  flex-grow: 1;
+  padding: 5px 10px;
+  margin-bottom: calc(var(--base-space) * 2);
+  border: 2px solid black;
+}
+
+.q-input:focus {
+  outline: none;
+}
