@@ -17,6 +17,11 @@ export default function LoginForm() {
             <Input iType="text" icon={faUser} />
             <Input iType="password" icon={faLock} />
             <Button btnName="로그인" f={login} />
+            <div className="sns d-flex">
+              <img src="/img/register/google.png" alt="google" />
+              <img src="/img/register/kakao.png" alt="kakao" />
+              <img src="/img/register/naver.png" alt="naver" />
+            </div>
           </form>
           <div className="menu">
             <Link to="/user/join">
