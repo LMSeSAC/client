@@ -1,3 +1,4 @@
+import React, { useState, useRef } from "react";
 import { Link } from "react-router-dom";
 import Button from "../Button";
 import Input from "./Input";
@@ -5,7 +6,37 @@ import { faUser, faLock } from "@fortawesome/free-solid-svg-icons";
 import "./LoginForm.scss";
 
 export default function LoginForm() {
-  const login = () => {};
+  const form = useRef<HTMLFormElement>(null);
+  const [formValue, setFormValue] = useState({ id: "", password: "" });
+
+  const onChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setFormValue({
+      ...formValue,
+      [e.target.name]: e.target.value,
+    });
+  };
+
+  const login = () => {
+    const result = form.current?.checkValidity();
+
+    if (!result) {
+      form.current?.reportValidity();
+      return;
+    }
+
+    fetch("http://localhost:8000/user/login", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        formValue,
+      }),
+    }).then((res) => {
+      console.log(res);
+    });
+  };
+
   return (
     <>
       <div className="login-form d-flex">
@@ -13,9 +44,14 @@ export default function LoginForm() {
           <Link to="/">
             <img src="/img/main/logo.png" alt="logo" />
           </Link>
-          <form>
-            <Input iType="text" icon={faUser} />
-            <Input iType="password" icon={faLock} />
+          <form ref={form}>
+            <Input iType="text" name="id" icon={faUser} onChange={onChange} />
+            <Input
+              iType="password"
+              name="password"
+              icon={faLock}
+              onChange={onChange}
+            />
             <Button btnName="로그인" f={login} />
             <div className="sns d-flex">
               <img src="/img/register/google.png" alt="google" />
