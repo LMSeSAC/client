@@ -17,4 +17,30 @@
   .menu span {
     font-size: var(--small-text);
   }
+
+  .sns {
+    justify-content: center;
+    align-items: center;
+
+    img {
+      margin-bottom: 0;
+      cursor: pointer;
+    }
+
+    img:first-child {
+      width: 40px;
+      height: 40px;
+    }
+
+    img:nth-child(2) {
+      width: 60px;
+      height: 60px;
+      margin-right: 3px;
+    }
+
+    img:last-child {
+      width: 38px;
+      height: 38px;
+    }
+  }
 }
