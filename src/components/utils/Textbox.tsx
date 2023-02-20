@@ -20,7 +20,7 @@ export default function Textbox() {
         formData.append("img", file);
 
         try {
-          const res = await fetch("http://localhost:8000/img", {
+          const res = await fetch("http://localhost:8080/img", {
             method: "POST",
             body: formData,
           });
