@@ -1,11 +1,10 @@
 import React, { KeyboardEvent, useRef } from "react";
 import { clickT } from "../../../../types/ClassroomT";
 import { cancle, post } from "../../../../utils/alert";
-import ReactQuill from "react-quill";
 import Input from "./Input";
 import Button from "./Button";
+import Textbox from "../../../utils/Textbox";
 import "./QuestionForm.scss";
-import "react-quill/dist/quill.snow.css";
 
 export default function QuestionForm({ onClick }: clickT) {
   const tag_box = useRef<HTMLDivElement>(null);
@@ -44,7 +43,7 @@ export default function QuestionForm({ onClick }: clickT) {
           <Input label="제목" name="title" />
           <Input label="해시태그" name="hashtag" onKeyDown={enterHashTag} />
           <div className="tag-box" ref={tag_box}></div>
-          <ReactQuill />
+          <Textbox />
           <div className="btns">
             <Button
               name="취소"

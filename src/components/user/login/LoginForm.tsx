@@ -35,6 +35,8 @@ export default function LoginForm() {
     }).then((res) => {
       console.log(res);
     });
+
+    form.current?.reset();
   };
 
   return (
