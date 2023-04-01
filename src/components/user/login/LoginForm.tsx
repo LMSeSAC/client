@@ -24,7 +24,7 @@ export default function LoginForm() {
       return;
     }
 
-    fetch("http://localhost:8080/user/login", {
+    fetch(`${process.env.REACT_APP_SERVER_USER}/login`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
