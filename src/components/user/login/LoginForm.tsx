@@ -24,6 +24,7 @@ export default function LoginForm() {
       return;
     }
 
+    console.log( process.env.REACT_APP_SERVER_USER)
     fetch(`${process.env.REACT_APP_SERVER_USER}/login`, {
       method: "POST",
       headers: {
