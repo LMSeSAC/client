@@ -4,6 +4,8 @@ import Button from "../Button";
 import Input from "./Input";
 import { faUser, faLock } from "@fortawesome/free-solid-svg-icons";
 import "./LoginForm.scss";
+import { error, success } from "../../../utils/message";
+import { RESTAPIBuilder } from "../../../utils/RestApiBuilder";
 
 export default function LoginForm() {
   const form = useRef<HTMLFormElement>(null);
@@ -24,18 +26,26 @@ export default function LoginForm() {
       return;
     }
 
-    fetch("http://localhost:8080/user/login", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({
-        formValue,
-      }),
-    }).then((res) => {
-      console.log(res);
-    });
+    const url = `${process.env.REACT_APP_SERVER_AUTH}/login`;
+    new RESTAPIBuilder(url,"POST")
+    .setBody(formValue)
+    .build()
+    .run()
+    .then((res) => {
+      console.log( "res : ", res )
+      window.sessionStorage.setItem('accessToken', res.accessToken);
+      window.sessionStorage.setItem('refreshToken', res.refreshToken);
 
+      success(res.name + "님 환영합니다.", () => {
+        setTimeout(() => {
+          window.location.href = "/"
+        }, 300)
+      })
+      
+    }).catch((err) => {
+      error('로그인 실패', err.message);
+    })
+    
     form.current?.reset();
   };
 
@@ -47,7 +57,7 @@ export default function LoginForm() {
             <img src="/img/main/logo.png" alt="logo" />
           </Link>
           <form ref={form}>
-            <Input iType="text" name="id" icon={faUser} onChange={onChange} />
+            <Input iType="text" name="userid" icon={faUser} onChange={onChange} />
             <Input
               iType="password"
               name="password"

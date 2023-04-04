@@ -10,6 +10,6 @@ export function emailCheck(email: string): boolean {
 
 export function passwordCheck(pw: string): boolean {
   const reg =
-    /^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[~?!@#$%^&*_-]).{8,16}$/;
+    /^(?=.*?[A-Za-z])(?=.*?[0-9])(?=.*?[~?!@#$%^&*_-]).{8,16}$/;
   return reg.test(pw);
 }

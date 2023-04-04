@@ -1,10 +1,10 @@
 import React, { KeyboardEvent, useRef } from "react";
 import { clickT } from "../../../../types/ClassroomT";
-import { cancle, post } from "../../../../utils/alert";
 import Input from "./Input";
 import Button from "./Button";
 import Textbox from "../../../utils/Textbox";
 import "./QuestionForm.scss";
+import { confirm } from "../../../../utils/message";
 
 export default function QuestionForm({ onClick }: clickT) {
   const tag_box = useRef<HTMLDivElement>(null);
@@ -48,13 +48,13 @@ export default function QuestionForm({ onClick }: clickT) {
             <Button
               name="취소"
               onClick={() => {
-                cancle(goBack);
+                confirm("확인", "취소하시겠습니까?",goBack,()=>{})
               }}
             />
             <Button
               name="작성"
               onClick={() => {
-                post(goBack);
+                confirm("확인", "작성하시겠습니까??",goBack,()=>{})
               }}
             />
           </div>
